@@ -6,6 +6,10 @@
 </head>
 <body>
 <h1>First Template</h1>
-<h2>{{ list }}</h2>
+<h2>Persons test</h2>
+<h3>{{ list }}</h3>
+{% for person in people %}
+    {{ person.first_name }} {{ person.last_name }}, {{ person.age }}, {{ person.address }}<br />
+{% endfor %}
 </body>
 </html>
