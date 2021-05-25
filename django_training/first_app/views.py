@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 # Create your views here.
 from django_training.first_app.models import Person
@@ -14,8 +14,6 @@ def index(req):
 
 
 def list_phones(req):
-    # just show http
-    # return HttpResponse("Phone list")
     context = {
         "phones": [
             {"name": "IPhone 12", "quantity": 10},
@@ -24,3 +22,18 @@ def list_phones(req):
         ]
     }
     return render(req, "phones.html", context)
+
+
+# def index_test(req):
+# just show http response
+# return HttpResponse("Test text", content_type="text")
+# return HttpResponse({"name": "Momchil"}, content_type="application/json")
+
+def create_person(req):
+    Person(
+        first_name="Peter",
+        last_name="Ivanov",
+        age=30,
+        address="Varna"
+    ).save()
+    return redirect("/first_app")

@@ -8,8 +8,31 @@
 <h1>First Template</h1>
 <h2>Persons test</h2>
 <h3>{{ list }}</h3>
-{% for person in people %}
-    {{ person.first_name }} {{ person.last_name }}, {{ person.age }}, {{ person.address }}<br />
-{% endfor %}
+{# Example with get request #}
+<form method="get" action="/first_app/create">
+    {# First variant to make button #}
+    <button>Create HardCode Person</button>
+    {# Second variant ... #}
+{#    <input type="button" value="Create">#}
+</form>
+<br/> {# just an empty row #}
+{# Example with post request #}
+<form method="get" action="/first_app/create">
+    <label>
+        <input name="first_name"/>
+        <input name="last_name"/>
+        <input name="age"/>
+        <input name="address"/>
+    </label>
+    <button>Create Person</button>
+</form>
+{# Show all persons #}
+<ul>
+    {% for person in people %}
+        <li>
+        {{ person.first_name }} {{ person.last_name }}, {{ person.age }}, {{ person.address }}
+        </li>
+    {% endfor %}
+</ul>
 </body>
 </html>
