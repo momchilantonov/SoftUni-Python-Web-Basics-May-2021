@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phones List</title>
+</head>
+<body>
+{#Hardcode items (phones)#}
+{#<ul>#}
+{#    <li>IPhone 12</li>#}
+{#    <li>Galaxy S20</li>#}
+{#    <li>Xiaomi Redmi N5</li>#}
+{#</ul>#}
+{#make a loop and context to show the items(phones)#}
+{#<ul>#}
+{#    {% for phone in phones %}#}
+{#        <li>#}
+{#            {{ phone }}#}
+{#        </li>#}
+{#    {% endfor %}#}
+{#</ul>#}
+{# with interactive widgets #}
+<ul>
+    {% for phone in phones %}
+        <li class="list-item">
+            <h1>{{ phone }}</h1>
+            <a href="..../{PHONE_ID}" class="btn cta-buy">
+                Buy
+            </a>
+        </li>
+    {% empty %}
+        No phones
+    {% endfor %}
+</ul>
+</body>
+</html>

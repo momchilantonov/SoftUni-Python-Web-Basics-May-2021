@@ -14,4 +14,13 @@ def index(req):
 
 
 def list_phones(req):
-    return HttpResponse("Phone list")
+    # just show http
+    # return HttpResponse("Phone list")
+    context = {
+        "phones": [
+            "IPhone 12",
+            "Galaxy S20",
+            "Xiaomi Redmi N5",
+        ]
+    }
+    return render(req, "phones.html", context)
