@@ -1,3 +1,4 @@
+from django.http import HttpResponse
 from django.shortcuts import render
 
 # Create your views here.
@@ -10,3 +11,7 @@ def index(req):
         "people": Person.objects.all()
     }
     return render(req, "index.html", context)
+
+
+def list_phones(req):
+    return HttpResponse("Phone list")
