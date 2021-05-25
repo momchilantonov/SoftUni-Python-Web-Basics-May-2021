@@ -19,14 +19,33 @@
 {#        </li>#}
 {#    {% endfor %}#}
 {#</ul>#}
-{# with interactive widgets #}
+{# with interactive widgets (buy buttons) #}
+{#<ul>#}
+{#    {% for phone in phones %}#}
+{#        <li class="list-item">#}
+{#            <h1>{{ phone }}</h1>#}
+{#            <a href="..../{PHONE_ID}" class="btn cta-buy">#}
+{#                Buy#}
+{#            </a>#}
+{#        </li>#}
+{#    {% empty %}#}
+{#        No phones#}
+{#    {% endfor %}#}
+{#</ul>#}
+{# With active button when qty is more than 0 #}
 <ul>
-    {% for phone in phones %}
+        {% for phone in phones %}
         <li class="list-item">
-            <h1>{{ phone }}</h1>
-            <a href="..../{PHONE_ID}" class="btn cta-buy">
-                Buy
-            </a>
+            <h1>{{ phone.name }}</h1>
+            {% if phone.quantity %}
+                <a href="..../{PHONE_ID}" class="btn cta-buy">
+                    Buy
+                </a>
+            {% else %}
+                <a style="pointer-events: none" href="..../{PHONE_ID}" class="btn cta-buy">
+                    Buy
+                </a>
+            {% endif %}
         </li>
     {% empty %}
         No phones

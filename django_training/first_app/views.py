@@ -18,9 +18,9 @@ def list_phones(req):
     # return HttpResponse("Phone list")
     context = {
         "phones": [
-            "IPhone 12",
-            "Galaxy S20",
-            "Xiaomi Redmi N5",
+            {"name": "IPhone 12", "quantity": 10},
+            {"name": "Galaxy S20", "quantity": 0},
+            {"name": "Xiaomi Redmi N5", "quantity": 20},
         ]
     }
     return render(req, "phones.html", context)
