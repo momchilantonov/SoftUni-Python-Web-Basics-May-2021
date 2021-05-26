@@ -9,7 +9,7 @@
 <h2>Persons test</h2>
 <h3>{{ list }}</h3>
 {# Example with get request #}
-<form method="get" action="/first_app/create">
+<form method="get" action={% url "create person" %}>
     {# First variant to make button #}
     <button>Create HardCode Person</button>
     {# Second variant ... #}
@@ -17,12 +17,13 @@
 </form>
 <br/> {# just an empty row #}
 {# Example with post request #}
-<form method="get" action="/first_app/create">
+<form method="post" action={% url "create person" %}>
     <label>
         <input name="first_name"/>
         <input name="last_name"/>
         <input name="age"/>
         <input name="address"/>
+        {% csrf_token %}
     </label>
     <button>Create Person</button>
 </form>
