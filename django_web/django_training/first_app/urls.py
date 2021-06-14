@@ -1,7 +1,7 @@
 from django.urls import path
-from django.views.generic import TemplateView
 
-from django_training.first_app.views import index, list_phones, create_person
+
+from .views import index, list_phones, create_person
 
 urlpatterns = [
     path("", index),

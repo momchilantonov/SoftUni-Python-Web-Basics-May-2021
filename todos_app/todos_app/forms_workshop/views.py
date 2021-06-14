@@ -1,7 +1,5 @@
 from django.shortcuts import render
-
-# Create your views here.
-from todos_app.forms_workshop.user_form import UserForm
+from .user_form import UserForm
 
 
 def post_show_form_data(request):

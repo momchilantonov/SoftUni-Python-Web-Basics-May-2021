@@ -1,8 +1,6 @@
-from django.http import HttpResponse
+# from django.http import HttpResponse
 from django.shortcuts import render, redirect
-
-# Create your views here.
-from django_training.first_app.models import Person
+from .models import Person
 
 
 def index(req):

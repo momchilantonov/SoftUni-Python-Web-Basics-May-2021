@@ -13,7 +13,6 @@ def validate_bot_catcher_empty(value):
         raise ValidationError('You are a bot')
 
 
-#
 # def validate_min_length(min_length):
 #     def validate(value):
 #         if len(value) < min_length:

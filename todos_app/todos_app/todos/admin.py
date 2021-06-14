@@ -1,7 +1,6 @@
 from django.contrib import admin
-
-from todos_app.todos.models import Todo
-from todos_app.todos.models.todo import Person, Category
+from .models import Todo
+from .models.todo import Person, Category
 
 
 # Option 2
@@ -13,6 +12,7 @@ class TodoAdmin(admin.ModelAdmin):
 
     # def has_change_permission(self, request, obj=None):
     #     return False
+
 
 # Option 1
 # admin.site.register(Todo, TodoAdmin)

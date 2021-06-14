@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect
+from .forms import CreateTodoForm, UpdateTodoForm
+from .models import Todo
 
-from todos_app.todos.forms import CreateTodoForm, UpdateTodoForm
 
-#
 # def index(request):
 #     context = {
 #         'todos': Todo.objects.all(),
@@ -41,7 +41,6 @@ from todos_app.todos.forms import CreateTodoForm, UpdateTodoForm
 #     todo.state = not todo.state
 #     todo.save()
 #     return redirect('/')
-from todos_app.todos.models import Todo
 
 
 def index(request):
