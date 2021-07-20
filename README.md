@@ -12,3 +12,4 @@ and we will get acquainted with the basic concepts in the MVC architecture.
 - Create own server
 - Web programming with Django
 # Certificate
+# <p align="center"> ![alt text](Python_Web_Basics_May_2021_Certificate.jpeg) <p>
